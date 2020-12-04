@@ -80,23 +80,6 @@ export class CourseFormComponent implements OnInit {
     });
   }
 
-  // var img = document.getElementsByTagName('a');
-  // f.value.imgUrl = img[img.length - 1].innerHTML;
-
-  // if (f.value.imgUrl === '') {
-  //   alert('must upload a picture');
-  //   location.reload();
-  // }
-  // console.log('here');
-  // this.UserService.createRegister(f.value).subscribe(
-  //   (res) => {
-  //     console.log(res);
-  //     this.router.navigateByUrl('/');
-  //   },
-  //   (error) => {
-  //     console.log(error);
-  //   }
-  // );
 
   onRemove(event: any) {
     console.log(event);

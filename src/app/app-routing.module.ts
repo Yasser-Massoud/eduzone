@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-
-
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -12,8 +10,8 @@ import { TeacherRegisterComponent } from './teacher-register/teacher-register.co
 import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
 import { HomeComponent } from './home/home.component';
 
-import {CourseFormComponent} from './course-form/course-form.component';
-import {StudentInfoComponent } from "./student-update-info/student-update-info.component"
+import { CourseFormComponent } from './course-form/course-form.component';
+import { StudentInfoComponent } from './student-update-info/student-update-info.component';
 import { UpdateTeacherComponent } from './update-teacher/update-teacher.component';
 import { TermOfServiceComponent } from './termOfService/termOfService.component';
 
@@ -28,20 +26,20 @@ import { TeacherProfileComponent } from './teacher-profile/teacher-profile.compo
 import { SearchComponent } from './search/search.component';
 import { SearchResultComponent } from './searchResult/searchResult.component';
 import { BalanceComponent } from './Balance/Balance.component';
-
+import { VideoChatComponent } from './video-chat/video-chat.component';
 import { CheckOutPayementComponent } from './checkOutPayement/checkOutPayement.component';
 import { ScienceFilterComponent } from './science-filter/science-filter.component';
 import { GDfilterComponent } from './GDfilter/GDfilter.component';
-
+import { AllTeachersComponent } from './all-teachers/all-teachers.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
-  
-  {path:'balance', component:BalanceComponent},
-  {path: 'rating', component: TestStarComponent },
+
+  { path: 'balance', component: BalanceComponent },
+  { path: 'rating', component: TestStarComponent },
   { path: 'home', component: HomeComponent },
-  {path:'type', component:FilterComponent},
-  { path:'design', component:TypeComponent},
+  { path: 'type', component: FilterComponent },
+  { path: 'design', component: TypeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'aboutUs', component: AboutUsComponent },
@@ -49,17 +47,18 @@ const routes: Routes = [
   { path: 'teacherLogin', component: TeacherLoginComponent },
   { path: 'Profile', component: StudentProfileComponent },
   { path: 'updateTeacher', component: UpdateTeacherComponent },
-  {path : "updateStudentInfo" , component:StudentInfoComponent },
-  {path : "servicesTerms", component:TermOfServiceComponent},
-  {path: "videoPlayer", component:VideoPlayerComponent},
-  {path : "addCourse", component:CourseFormComponent},
-  {path : "dashboard", component: TeacherProfileComponent},
-  {path : "search", component: SearchComponent },
-  {path : "searchResult", component: SearchResultComponent },
-  {path : "payement", component: CheckOutPayementComponent },
-  {path : "sciencefilter", component : ScienceFilterComponent},
-  {path : "gdfilter", component : GDfilterComponent},
-
+  { path: 'updateStudentInfo', component: StudentInfoComponent },
+  { path: 'servicesTerms', component: TermOfServiceComponent },
+  { path: 'videoPlayer', component: VideoPlayerComponent },
+  { path: 'addCourse', component: CourseFormComponent },
+  { path: 'dashboard', component: TeacherProfileComponent },
+  { path: 'search', component: SearchComponent },
+  { path: 'searchResult', component: SearchResultComponent },
+  { path: 'payement', component: CheckOutPayementComponent },
+  { path: 'sciencefilter', component: ScienceFilterComponent },
+  { path: 'gdfilter', component: GDfilterComponent },
+  { path: 'allTeachers', component: AllTeachersComponent },
+  { path: 'videoChat', component: VideoChatComponent },
 ];
 
 @NgModule({

@@ -26,6 +26,10 @@ export class TeacherService {
     return this.http.get(teacherUrl + id);
   }
 
+  getAllTeachers(): Observable<any> {
+    return this.http.get(teacherUrl);
+  }
+
   //send mail to teacher
   sendEmail(teacherEmail: any): Observable<any> {
     return this.http.post(teacherUrl + '/sendemail', teacherEmail);

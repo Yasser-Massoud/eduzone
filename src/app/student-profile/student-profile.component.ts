@@ -37,7 +37,7 @@ export class StudentProfileComponent implements OnInit {
         console.log('video', this.video);
         for (let i = 0; i < this.video.length; i++) {
           this.coursesService.getOne(this.video[i]).subscribe((res) => {
-            console.log(res);
+            console.log("res",res);
             this.myCourses.push(res);
             console.log('my courses in get one', this.myCourses);
           });
@@ -57,6 +57,7 @@ export class StudentProfileComponent implements OnInit {
     if (this.course) {
       this.sharedService.sendCourse(this.course);
     }
+    this.sharedService.sendStudent(this.student)
     // console.log('course', this.course)
     this.router.navigateByUrl('/videoPlayer');
   }

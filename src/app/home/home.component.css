@@ -77,7 +77,10 @@ p{
 
 .carousel-item{
   box-sizing: border-box;
+  width: 1790px;
+  height: 650px;
   border-radius: 8px;
+  margin-left:55px;
 }
 .a {
   color: black;

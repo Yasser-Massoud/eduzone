@@ -37,12 +37,23 @@ const Course = new Schema(
     rating: {
       type: Number,
       required: false,
-      default: 0,
     },
     sections: {
       type: String,
       required: true,
     },
+    comments: [
+      {
+        author: {
+          type: String,
+          required: false,
+        },
+        text: {
+          type: String,
+          required: false,
+        },
+      },
+    ],
   },
   { timestamps: true }
 );

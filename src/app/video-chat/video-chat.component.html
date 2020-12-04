@@ -1,0 +1,23 @@
+<div #selectRoom>
+  <label>Type the room number</label>
+  <input id="roomNumber" type="text" />
+  <button id="goRoom" (click)="launchCall()">Go</button>
+</div>
+
+<div #consultingRoom  style="display:none">
+  <div>
+    <video #localVideo autoplay ></video>
+    <div>
+      
+      <button  (click)="muteAudio()">Mute Mic</button>
+      <button (click)="disableVideo()">Disable Video</button> 
+      <button (click)="endCall()">End Call</button>
+    </div>
+  </div>
+      
+    <div>
+      <video #remoteVideo autoplay ></video> 
+      
+    </div>
+</div>
+<router-outlet></router-outlet>

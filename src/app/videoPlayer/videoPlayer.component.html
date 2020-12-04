@@ -1,24 +1,43 @@
-
-
 <app-navbar></app-navbar>&nbsp;
 
-
 <div class="body">
-<div class="container">
-  <div >
-    <h1>{{ course.title }}</h1>
+  <div class="container">
+    <div>
+      <h1>{{ course.title }}</h1>
+    </div>
+
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        class="embed-responsive-item"
+        [src]="Url"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <p>{{ course.numberOfViews }} people watched this video</p>
+    <my-app
+      [selectedValue]="selectedValue"
+      (change)="countChange($event)"
+    ></my-app>
+    <div class="md-form">
+      <textarea
+        class="md-textarea form-control"
+        rows="3"
+        id="text"
+        type="text"
+        length="120"
+        name="text"
+        [(ngModel)]="comment.text"
+        mdbCharCounter
+        mdbInput
+      ></textarea>
+      <label for="input_text">add comment</label>
+      <button (click)="addComment()">comment</button>
+      <div *ngFor="let comment of comments">
+        <h4>{{ comment.author }}:{{ comment.text }}</h4>
+      </div>
+    </div>
   </div>
-
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" [src]="Url" allowfullscreen></iframe>
-</div>
-
-<p>{{ course.numberOfViews }} people watched this video</p>
-<my-app 
-[selectedValue]="selectedValue"
-(change)="countChange($event)"
-></my-app>
-</div>
 </div>
 
 <app-footer></app-footer>

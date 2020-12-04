@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class SharedService {
   course: any;
+  student: any;
   selectedValue: any;
   constructor() {}
 
@@ -16,11 +17,18 @@ export class SharedService {
     return this.course;
   }
 
-  sendValue(data : any){
-    this.selectedValue = data
+  sendValue(data: any) {
+    this.selectedValue = data;
   }
 
-  getValue(){
-    return this.selectedValue
+  getValue() {
+    return this.selectedValue;
+  }
+
+  sendStudent(data: any) {
+    this.student = data;
+  }
+  getStudent() {
+    return this.student;
   }
 }

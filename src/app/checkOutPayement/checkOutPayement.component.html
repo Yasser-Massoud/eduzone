@@ -1,125 +1,173 @@
 <app-navbar></app-navbar>&nbsp;
 
-
-
-<div class= 'container-fluid' >
-
-<h1>Billing & Credit Card Information</h1>
-<p>let's get your trip'in! Complete the payement form below to confirm your purchase(s).</p>
-
-
-
-<div class ='payement' style="margin-right: 10%; margin-left: 10%;">
-  <form
-  class="text-center border border-light p-5"
-  >
-  <p class="h4 mb-4">Payement amount:</p>
-  <!-- Grid row -->
-  <div class='photo'>
-  <div class="row">
-  <!-- Grid column -->
-  <div class="col-xl-3 col-md-4 mb-3">
-    <img src="../../assets/credit card logo/visa-1000x600.jpg" class="img-fluid z-depth-1"
-      alt="Responsive image">
-  </div>
-  <div class="col-xl-3 col-md-4 mb-3 text-center">
-    <img src="../../assets/credit card logo/Mastercard.jpg" class="img-fluid z-depth-1"
-    alt="Responsive image">
-  </div>
-  <!-- Grid column -->
-  <!-- Grid column -->
-  <div class="col-xl-3 col-md-4 mb-3 text-right">
-    <img src="../../assets/credit card logo/paypal-logo_0670045701665860.png" class="img-fluid z-depth-1"
-    alt="Responsive image">
-  </div>
-  <!-- Grid column -->
-</div>
-</div>
-<!-- Grid row -->
-  <!-- <p class="h4 mb-4">Checkout</p> -->
-  <div class="d-block my-3">
-    <div class="custom-control custom-radio">
-      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-      <label class="custom-control-label" for="credit">Credit card</label>
-    </div>
-    <div class="custom-control custom-radio">
-      <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-      <label class="custom-control-label" for="debit">Debit card</label>
-    </div>
-    <div class="custom-control custom-radio">
-      <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-      <label class="custom-control-label" for="paypal">Paypal</label>
-    </div>
-  </div>
-  <div class="form-row mb-4">
-    <div class="col">
-      <!-- First name -->
-      <label for="fname">Name on card</label>
-      <input
-        type="text"
-        name="Name on card"
-        ngModel
-        required
-        class="form-control"
-        placeholder="Enter Name on card"
-      />
-    </div>
-    <div class="form-row mb-4">
-      <div class="col">
-        <!-- First name -->
-        <label for="fname">Name on card</label>
-        <input
-          type="text"
-          name="Name on card"
-          ngModel
-          required
-          class="form-control"
-          placeholder="Enter Name on card"
-        />
-      </div>
-      <div class="col">
-        <!-- Last name -->
-        <label for="number"
-          >Credit card <i class="far fa-credit-card"></i
-        ></label>
-        <input
-          type="text"
-          name="creditCard"
-          ngModel
-          required
-          class="form-control"
-          placeholder=" credit card number"
-        />
-      </div>
-    </div>
-  </div>
-<div class='ce'>
-  <div class='form-row'><!-- CCV-->
-    <div class='col-xs-4 form-group cvc required'>
-      <label class='control-label'>CVC</label>
-      <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4' type='text'>
-    </div>
-    <div class='col-xs-4 form-group expiration required'><!-- Date of expiration -->
-      <label class='control-label'>Expiration</label>
-      <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
-    </div>
-    <div class='col-xs-4 form-group expiration required'>
-      <label class='control-label'> </label>
-      <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
-    </div>
-  </div>
-</div>
-  
-<!--update button -->
-<button class="btn btn-primary btn-lg active" type="submit" ><i class="fas fa-lock"></i> Pay</button>
-<hr />
-  <!-- Terms of service -->
+<div class="container-fluid">
+  <h1>Billing & Credit Card Information</h1>
   <p>
-    By clicking <em>pay</em> you agree to our
-    <a   routerLink="/servicesTerms" >terms of service</a>
+    let's get your trip'in! Complete the payement form below to confirm your
+    purchase(s).
   </p>
-</form>
-</div> 
+
+  <div class="payement" style="margin-right: 10%; margin-left: 10%">
+    <form class="text-center border border-light p-5">
+      <p class="h4 mb-4">Payement amount:</p>
+      <!-- Grid row -->
+      <div class="photo">
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-xl-3 col-md-4 mb-3">
+            <img
+              src="../../assets/credit card logo/visa-1000x600.jpg"
+              class="img-fluid z-depth-1"
+              alt="Responsive image"
+            />
+          </div>
+          <div class="col-xl-3 col-md-4 mb-3 text-center">
+            <img
+              src="../../assets/credit card logo/Mastercard.jpg"
+              class="img-fluid z-depth-1"
+              alt="Responsive image"
+            />
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-xl-3 col-md-4 mb-3 text-right">
+            <img
+              src="../../assets/credit card logo/paypal-logo_0670045701665860.png"
+              class="img-fluid z-depth-1"
+              alt="Responsive image"
+            />
+          </div>
+          <!-- Grid column -->
+        </div>
+      </div>
+      <!-- Grid row -->
+      <!-- <p class="h4 mb-4">Checkout</p> -->
+      <div class="d-block my-3">
+        <div class="custom-control custom-radio">
+          <input
+            id="credit"
+            name="paymentMethod"
+            type="radio"
+            class="custom-control-input"
+            checked
+            required
+          />
+          <label class="custom-control-label" for="credit">Credit card</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input
+            id="debit"
+            name="paymentMethod"
+            type="radio"
+            class="custom-control-input"
+            required
+          />
+          <label class="custom-control-label" for="debit">Debit card</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input
+            id="paypal"
+            name="paymentMethod"
+            type="radio"
+            class="custom-control-input"
+            required
+          />
+          <label class="custom-control-label" for="paypal">Paypal</label>
+        </div>
+      </div>
+      <div class="form-row mb-4">
+        <div class="col">
+          <!-- First name -->
+          <label for="fname">Name on card</label>
+          <input
+            type="text"
+            name="Name on card"
+            ngModel
+            required
+            class="form-control"
+            placeholder="Enter Name on card"
+          />
+        </div>
+        <div class="form-row mb-4">
+          <div class="col">
+            <!-- First name -->
+            <label for="fname">Name on card</label>
+            <input
+              type="text"
+              name="Name on card"
+              ngModel
+              required
+              class="form-control"
+              placeholder="Enter Name on card"
+            />
+          </div>
+          <div class="col">
+            <!-- Last name -->
+            <label for="number"
+              >Credit card <i class="far fa-credit-card"></i
+            ></label>
+            <input
+              type="text"
+              name="creditCard"
+              ngModel
+              required
+              class="form-control"
+              placeholder=" credit card number"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="ce">
+        <div class="form-row">
+          <!-- CCV-->
+          <div class="col-xs-4 form-group cvc required">
+            <label class="control-label">CVC</label>
+            <input
+              autocomplete="off"
+              class="form-control card-cvc"
+              placeholder="ex. 311"
+              size="4"
+              type="text"
+            />
+          </div>
+          <div class="col-xs-4 form-group expiration required">
+            <!-- Date of expiration -->
+            <label class="control-label">Expiration</label>
+            <input
+              class="form-control card-expiry-month"
+              placeholder="MM"
+              size="2"
+              type="text"
+            />
+          </div>
+          <div class="col-xs-4 form-group expiration required">
+            <label class="control-label"> </label>
+            <input
+              class="form-control card-expiry-year"
+              placeholder="YYYY"
+              size="4"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!--update button -->
+      <button
+        class="btn btn-primary btn-lg active"
+        type="submit"
+        routerLink="/Profile"
+      >
+        <i class="fas fa-lock"></i> Pay
+      </button>
+      <hr />
+      <!-- Terms of service -->
+      <p>
+        By clicking <em>pay</em> you agree to our
+        <a routerLink="/servicesTerms">terms of service</a>
+      </p>
+    </form>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

@@ -5,7 +5,7 @@ const Course = require("../database/models/course");
 
 router.get("/:id", async (req, res) => {
   console.log(req.params.id);
-  const course = await await Course.findById(req.params.id)
+  const course = await Course.findById(req.params.id)
     .populate("teacher")
     .exec();
   res.json(course);
@@ -14,9 +14,8 @@ router.get("/:id", async (req, res) => {
 //get all courses
 
 router.get("/", async (req, res) => {
-  await Course.find({}, (err, data) => {
-    return res.json(data);
-  });
+  const courses = await Course.find({});
+  res.json(courses);
 });
 
 router.post("/getCourses", async (req, res) => {
@@ -56,6 +55,7 @@ router.post("/addCourse", async (req, res) => {
     numberOfViews,
     rating,
     sections,
+    comments,
   } = req.body;
 
   const newCourse = new Course({
@@ -68,6 +68,7 @@ router.post("/addCourse", async (req, res) => {
     numberOfViews,
     rating,
     sections,
+    comments,
   });
 
   const newCourseAdded = await newCourse.save();
@@ -77,23 +78,18 @@ router.post("/addCourse", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-  
-  await Course.findByIdAndUpdate(req.params.id, req.body);
-  res.json("course updated");
+  console.log(req.body);
+  const course = await Course.findByIdAndUpdate(req.params.id, req.body);
+  res.json(course);
 });
 
-router.put("/rating/:id",async (req, res) => {
-  console.log(req.body) 
+router.put("/rating/:id", async (req, res) => {
+  console.log(req.body);
   const cours = await Course.findById(req.params.id);
-  let average = (cours.rating + req.body.rating) /2
-  let newAverage = average.toFixed(2)
-  await Course.findByIdAndUpdate(req.params.id, {rating : newAverage});
+  let average = (cours.rating + req.body.rating) / 2;
+  let newAverage = average.toFixed(2);
+  await Course.findByIdAndUpdate(req.params.id, { rating: newAverage });
   res.json("course updated");
-})
-
-
-
-
-
+});
 
 module.exports = router;

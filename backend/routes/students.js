@@ -17,6 +17,12 @@ const nodemailer = require("nodemailer");
 const smtpTransport = require("nodemailer-smtp-transport");
 
 dotenv.config();
+
+//get student by Id
+router.get("/:id", async (req, res) => {
+  const student =await Student.findById(req.params.id);
+  res.json(student);
+});
 //getting all students
 router.get("/", async (req, res) => {
   await Student.find({}, (err, data) => {
