@@ -1,0 +1,30 @@
+.btn.btn-primary.btn-lg.active{
+    height: 40px;
+    width: 140px;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    font-size:12px;
+}
+.x {
+    margin-left:700px;
+    
+}
+/* .container-fluid{
+background: url("../../assets/background/background.jpg")
+no-repeat;
+overflow: hidden;
+background-size: cover;
+min-height: 100vh;
+} */
+.white-text.mx-3{
+    font-size:40px;
+}
+.i,.j,.k{
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    font-weight: bolder;
+    font-size: 20px;
+}

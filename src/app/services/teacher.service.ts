@@ -34,7 +34,7 @@ export class TeacherService {
   sendEmail(teacherEmail: any): Observable<any> {
     return this.http.post(teacherUrl + '/sendemail', teacherEmail);
   }
-
+ 
   teacherUpdateBalance(id: any, teacherInfo: any): Observable<any> {
     return this.http.put(teacherUrl + 'balance/' + `${id}`, teacherInfo);
   }

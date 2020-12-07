@@ -30,7 +30,7 @@ import { VideoChatComponent } from './video-chat/video-chat.component';
 import { CheckOutPayementComponent } from './checkOutPayement/checkOutPayement.component';
 import { ScienceFilterComponent } from './science-filter/science-filter.component';
 import { GDfilterComponent } from './GDfilter/GDfilter.component';
-import { AllTeachersComponent } from './all-teachers/all-teachers.component';
+
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -57,7 +57,6 @@ const routes: Routes = [
   { path: 'payement', component: CheckOutPayementComponent },
   { path: 'sciencefilter', component: ScienceFilterComponent },
   { path: 'gdfilter', component: GDfilterComponent },
-  { path: 'allTeachers', component: AllTeachersComponent },
   { path: 'videoChat', component: VideoChatComponent },
 ];
 

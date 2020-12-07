@@ -3,7 +3,7 @@
 } */
 
 .form-control.form-control-lg{
-    width: 250px;
+    width: 600px;
     margin-left: 90px;
     margin-top:-40px;
 }
@@ -16,6 +16,6 @@ margin-left: 70px;
     margin-left: 500px;
 }
 ul{
-    width: 300px;
+    width: 600px;
     margin-left: 580px;
 }

@@ -1,23 +1,143 @@
+
+<app-navbar></app-navbar>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div class= 'container-fluid' >
+<div #selectRoom style="margin-right: 10%; margin-left: 10%; margin-top:50px;">
+  <label for="exampleForm2"> <i class="far fa-keyboard"></i> &nbsp; Type the room number/name :</label>
+  <input type="text" id="roomNumber" class="form-control" style = "width:200px;">
+  <br/>
+  <label for="exampleForm2"> <i class="far fa-envelope"></i> &nbsp; Send request to :</label>
+<input type="text" id="email" class="form-control" style = "width:400px;">
+  <button id="goRoom" class='btn btn-primary btn-lg active' (click)="launchCall()">Go</button>
+
+
+  <!-- <div class="container" *ngFor="let teacher of teachers">
+
 <div #selectRoom>
-  <label>Type the room number</label>
-  <input id="roomNumber" type="text" />
+  <label>Type the room number :</label>
+  <input id="roomNumber" type="text" /> <br>
+  <label>Send request to :</label>
+  <input id="email" type="text" />
   <button id="goRoom" (click)="launchCall()">Go</button>
+  <div class="container" *ngFor="let teacher of teachers">
+
+    <ul class="list-group">
+      <li class="list-group-item">
+        name: {{ teacher.firstName }},&nbsp;&nbsp;&nbsp; email:{{ teacher.email }}
+      </li>
+    </ul>
+
+  </div> -->
+
+
+&nbsp;
+<br/>
+  <br/><br/>
+  
+<!-- /////////////////////// -->
+
+<!-- Table with panel -->
+<div class="card card-cascade narrower" style="margin-right: 40%; margin-left: 40%; width:800px; margin-top: -280px; " >
+
+  <!--Card image-->
+  <div
+    class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+
+    <div>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" routerLink = '/dashboard'>
+        <i class="fas fa-th-large mt-0"></i>
+      </button>
+      
+    </div>
+
+    <a href="" class="white-text mx-3">  My teachers </a>
+
+    <div>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="fas fa-pencil-alt mt-0"></i>
+      </button>
+      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+        <i class="far fa-trash-alt mt-0"></i>
+      </button>
+    </div>
+
+  </div>
+  <!--/Card image-->
+
+  <div class="px-4">
+
+    <div class="table-wrapper">
+      <!--Table-->
+      <table class="table table-hover mb-0">
+
+        <!--Table head-->
+        <thead>
+          <tr>
+            <th>
+              <input class="form-check-input" type="checkbox" id="checkbox">
+              <label class="form-check-label" for="checkbox" class="mr-2 label-table"></label>
+            </th>
+            <th class="th-lg">
+              <a>First Name
+                <i class="fas fa-sort ml-1"></i>
+              </a>
+            </th>
+            <th class="th-lg">
+              <a href="">Last Name
+                <i class="fas fa-sort ml-1"></i>
+              </a>
+            </th>
+            <th class="th-lg">
+              <a href="">email
+                <i class="fas fa-sort ml-1"></i>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody *ngFor="let teacher of teachers">
+          <tr>
+            <th scope="row">
+              <input class="form-check-input" type="checkbox" id="checkbox1">
+              <label class="form-check-label" for="checkbox1" class="label-table"></label>
+            </th>
+            <td class='i'>{{ teacher.firstName }}</td>
+            <td class='j'>{{ teacher.lastName }}</td>
+            <td class='k'>{{ teacher.email }}</td>
+            
+          </tr>
+        </tbody>
+        <!--Table body-->
+      </table>
+      <!--Table-->
+    </div>
+
+  </div>
 </div>
 
-<div #consultingRoom  style="display:none">
+</div>
+</div>
+<!-- Table with panel -->
+<!-- //////////////////////// -->
+
+
+<div class ='x' #consultingRoom  style="display:none;">
+
   <div>
     <video #localVideo autoplay ></video>
     <div>
       
-      <button  (click)="muteAudio()">Mute Mic</button>
-      <button (click)="disableVideo()">Disable Video</button> 
-      <button (click)="endCall()">End Call</button>
+      <button class='btn btn-primary btn-lg active' (click)="muteAudio()">Mute Mic &nbsp;&nbsp; <i class="fas fa-microphone-slash"></i></button>
+      <button class='btn btn-primary btn-lg active' (click)="disableVideo()">Disable Video &nbsp;&nbsp;<i class="fas fa-video-slash"></i></button> 
+      <button class='btn btn-primary btn-lg active' (click)="endCall()">End Call</button>
     </div>
   </div>
-      
     <div>
       <video #remoteVideo autoplay ></video> 
-      
     </div>
 </div>
+<br/><br/><br/>
+<app-footer></app-footer>
 <router-outlet></router-outlet>

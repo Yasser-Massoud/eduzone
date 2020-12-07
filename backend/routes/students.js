@@ -40,7 +40,42 @@ const schema = Joi.object({
   dateOfBirth: Joi.date(),
   imageUrl: Joi.string(),
 });
+// //send request to join a video chat room via email
+router.post("/sendRequestVideo", async (req,res)=>{
+  nodemailer.createTestAccount((err, email) => {
+    var transporter = nodemailer.createTransport(
+      smtpTransport({
+        service: "gmail",
+        port: 465,
+        secure: false,
+        host: "smtp.gmail.com",
+        auth: {
+          user: "Eduzone.Tunisia@gmail.com",
+          pass: "eduzone12112020",
+        },
+        tls: {
+          rejectUnauthorized: false,
+        },
+      })
+    );
 
+    let mailOptions = {
+      from: "Eduzone.Tunisia@gmail.com",
+      to: `${req.body.email}`,
+      subject: "Request to join a video confrence ",
+      text: `
+        welcome ${req.body.lastName} ${req.body.firstName},
+        
+                There's a video conference request please join on room ${req.body.roomNumber}`,
+    };
+    transporter.sendMail(mailOptions, (err, info) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+  });
+  
+})
 //create a student
 router.post("/studentRegistration", async (req, res, next) => {
   console.log(req.body);
